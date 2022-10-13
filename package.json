@@ -1,6 +1,6 @@
 {
-  "homepage": "https://AatirMed.github.io/crud-simple",
-  "name": "crud-simple",
+  "homepage": "https://AatirMed.github.io/todo-simple",
+  "name": "todo-simple",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
