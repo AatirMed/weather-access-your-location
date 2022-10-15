@@ -1,6 +1,6 @@
 {
-  "homepage": "https://AatirMed.github.io/todo-simple",
-  "name": "todo-simple",
+  "homepage": "https://AatirMed.github.io/activites-touristique-201",
+  "name": "activites-touristique-201",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,6 +9,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.2.2",
+    "bootstrap-icons": "^1.9.1",
     "nanoid": "^4.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.5.0",

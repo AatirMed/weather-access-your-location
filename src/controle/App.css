@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700;900&display=swap");
+html {
+  font-family: "Poppins", sans-serif;
+}
+.main {
+  width: 290px;
+  margin: 40px auto;
+}
+.header h2 {
+  padding: 10px 15px;
+  margin: 0;
+  font-weight: 500;
+  font-size: 26px;
+  border-radius: 5px;
+}
+.noti {
+  background-color: #4dacfa;
+  color: blue;
+  font-weight: 400;
+  width: 260px;
+  height: 20px;
+  line-height: 20px;
+  margin: 1rem 0;
+  padding: 12px 20px;
+  border-radius: 5px;
+}
+.activite_NO,
+.activite_selection {
+  width: 260px;
+  height: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+.activite_selection {
+  color: #fff;
+  background-color: #4ccc47;
+}
+.activite_NO {
+  color: #000;
+}
+.total {
+  width: 260px;
+  height: 20px;
+  line-height: 20px;
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.totalRemise {
+  width: 260px;
+}
+.t1 {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+  height: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  padding: 0 15px;
+  margin-bottom: 8px;
+}
+.t1 input[type="number"] {
+  outline: none;
+  width: 50px;
+  padding: 0.4px 5px;
+}
