@@ -20,7 +20,8 @@ const InputFromEdit = () => {
         <div>
           <h3>Name</h3>{" "}
           <input
-          value={store.name}
+      
+          defaultValue={store.name}
             type="text"
             placeholder="Name"
             name="name"
@@ -32,7 +33,8 @@ const InputFromEdit = () => {
           <input
             type="text"
             placeholder="Ville"
-            value={store.ville}
+            
+            defaultValue={store.ville}
             name="ville"
             onChange={HandChange}
           />

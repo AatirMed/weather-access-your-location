@@ -27,7 +27,7 @@ const crudSlice = createSlice({
     Edit: (state, action) => {
       const newUsers = [...state.users];
       newUsers.map((ele) => {
-        if (ele.id === state.edit_id) {
+        if (ele.id === state.edit_id.id) {
           if (action.payload.name !== "") {
             ele.name = action.payload.name;
           }
