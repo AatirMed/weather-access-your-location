@@ -1,6 +1,6 @@
 {
-  "homepage": "https://AatirMed.github.io/activites-touristique-202",
-  "name": "activites-touristique-202",
+  "homepage": "https://AatirMed.github.io/crud-redux",
+  "name": "crud-redux",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
