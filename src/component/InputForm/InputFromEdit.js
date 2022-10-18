@@ -1,5 +1,5 @@
 import { Edit, monter, disREmove } from "../../store/store";
-import { useDispatch ,useSelector} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import React, { useState } from "react";
 
 const InputFromEdit = () => {
@@ -7,7 +7,7 @@ const InputFromEdit = () => {
   const [user, setuser] = useState({ name: "", ville: "" });
   const dispatch = useDispatch();
   const store = useSelector((state) => state.edit_id);
-  console.log(store)
+  console.log(store);
   const HandChange = (event) => {
     const { name, value } = event.target;
     setuser({ ...user, [name]: value });
@@ -20,8 +20,7 @@ const InputFromEdit = () => {
         <div>
           <h3>Name</h3>{" "}
           <input
-      
-          defaultValue={store.name}
+            defaultValue={store.name}
             type="text"
             placeholder="Name"
             name="name"
@@ -33,7 +32,6 @@ const InputFromEdit = () => {
           <input
             type="text"
             placeholder="Ville"
-            
             defaultValue={store.ville}
             name="ville"
             onChange={HandChange}
