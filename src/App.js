@@ -1,23 +1,36 @@
-import { useSelector } from "react-redux";
-import React from "react";
+import React, { Fragment } from "react";
 
-// Component
-import Show from "./component/Table/Show";
-import InputFromAdd from "./component/InputForm/InputFromAdd";
-import InputFromEdit from "./component/InputForm/InputFromEdit";
-
+//component
+import Footer from "./component/Footer/Footer";
+import Show from "./component/Show/Show";
+import InputForm from "./component/InputForm/InputForm";
 //css
-import "./Css/App.css";
+import "./part/css/App.css";
 
 const App = () => {
-  const store = useSelector((state) => state);
+  // const store = useSelector((state) => state);
+  
   return (
-    <div className="main">
-      {store.isMonter ? <InputFromAdd /> : <InputFromEdit />}
-      <div className="show">
-        <Show />
+    <Fragment>
+      <div className="main">
+        <div className="header">
+          <h2>THINGS TO DO</h2>
+        </div>
+
+        <div>
+          <InputForm />
+        </div>
+
+        <div className="all-todo">
+          <Show />
+        </div>
+
+        <div className="footer">
+          <Footer />
+        </div>
       </div>
-    </div>
+      <p className="press">Press `Enter` to Add</p>
+    </Fragment>
   );
 };
 

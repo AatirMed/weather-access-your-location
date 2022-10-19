@@ -1,6 +1,6 @@
 {
-  "homepage": "https://AatirMed.github.io/crud-redux",
-  "name": "crud-redux",
+  "homepage": "https://AatirMed.github.io/todo-medium",
+  "name": "todo-medium",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
