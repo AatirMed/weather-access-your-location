@@ -1,0 +1,44 @@
+.Contenu{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+span{
+    margin:0 15px;
+}
+.icon_delete{
+    border:solid 1px black;
+    margin: 0 3px;
+}
+.green ,.blue,.Warming,.danger{
+    width: 100%;
+    line-height: 50px;
+    color: white;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
+.Warming{
+    background-color: rgb(238, 195, 53);
+}
+.danger{
+    background-color: red;
+}
+.top{
+    padding-right: 50px;
+}
+.all{
+width: 890px;
+margin: 0 auto;    
+}
+.btn{
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    border: none;
+}
