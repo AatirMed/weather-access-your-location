@@ -1,32 +1,44 @@
-nav{
-margin-bottom:30px ;
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Muli", sans-serif;
 }
 
-a{
-    text-decoration: none;
-    margin: 0px 15px;
-    color:black;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-family: sans-serif;
-}
-.body{
-    margin: 0px 20px;
-}
-.valid{
-    outline: none;
-    margin-right: 5px;
-}
-.validTrue{
-    border: 1.5px solid #6b6a6a;;
+.main {
+  width: 95%;
+  display: flex;
+  margin: 56px auto;
 }
 
-.validFalse{
-    border:solid 1.5px red;
+.panel {
+  width: 1100px;
+  height: 800px;
+  border-radius: 50px;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  flex: 0.5;
+  margin: 0 10px;
+  position: relative;
+  transition: all 700ms ease-in;
 }
-.textCtrue{
-    color:green;
+
+.active {
+  flex: 5;
 }
-.textCfalse{
-    color: red;
+
+.panel h3 {
+  position: absolute;
+  font-size: 24px;
+  bottom: 35px;
+  left: 20px;
+  opacity: 0;
+}
+.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
 }
