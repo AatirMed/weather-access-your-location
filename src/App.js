@@ -1,36 +1,53 @@
-import React, { useState } from "react";
+import React from "react";
+import StepProgressBar from 'react-step-progress';
+import 'react-step-progress/dist/index.css';
 import './App.css';
-import img1 from './Day01img/Day1Card01.jpg';
-import img2 from './Day01img/Day1Card02.jpg';
-import img3 from './Day01img/Day1Card03.jpg';
-import img4 from './Day01img/Day1Card04.jpg';
-import img5 from './Day01img/Day1Card05.jpg';
-
 const App = () => {
 
-  const All_img = [img1, img2, img3, img4, img5]
-  const [Choix, setChoix] = useState(0)
-  const HandClickCard = (index) => setChoix(index)
+  function step1Validator() {
+    // return a boolean (true or false)
+    return true;
+  }
 
-  console.log(Choix)
+  const END = () => {
+    console.log(10)
+  }
+
   return (
     <div className="main">
-      {
-        All_img.map((ele, index) =>
-          <div key={index}
-            className={Choix === index ? 'panel active' : 'panel'}
-            style={{
-              backgroundImage: `url(${ele})`
-            }}
-            onClick={() => HandClickCard(index)}>
-            <h3>Explore The World</h3>
-          </div>)
-      }
+      <StepProgressBar
+        startingStep={0} // the index of the step at which to start startingStep
+        onSubmit={END}
+        steps={[
+          {
+            label: 'Title',
+            subtitle: 'SubTitle(10%)',
+            name: 'step 1',
+            validator: step1Validator,
+            // content: <h3>this is content</h3>,
+
+          },
+          {
+            label: 'Step 2',
+            name: 'step 2',
+            subtitle: '35%',
+
+          },
+          {
+            label: 'Step 3',
+            name: 'step 3',
+            
+
+          }
+        ]}
+        subtitleClass='SubT' //className css 
+        previousBtnName='Prev' //Change the text inside the previous btn
+        nextBtnName='Next' //Change the text inside the next btn
+        submitBtnName='Valid' //Change the text inside the submit btn
+        //another Optional https://github.com/saini-g/react-step-progress
+        />
     </div>
-  );
+  )
 };
 
 export default App;
-
-
-
