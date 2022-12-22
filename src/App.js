@@ -1,53 +1,63 @@
-import React from "react";
-import StepProgressBar from 'react-step-progress';
-import 'react-step-progress/dist/index.css';
-import './App.css';
+import React, { useState, useEffect, Fragment } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { CircularProgress } from "@mui/material";
+import moment from "moment/moment";
+import { getElement } from "./store";
+import "./App.css";
+
+
 const App = () => {
+  const dispatch = useDispatch();
+  const store = useSelector((res) => res);
+  const [location, setLocation] = useState({ latitude: 0, longitude: 0 });
+const [Celsius,setCelsius]=useState(0)
 
-  function step1Validator() {
-    // return a boolean (true or false)
-    return true;
-  }
+  // get location
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(
+      (position) => setLocation(position.coords),
+      (error) => console.error(error)
+    );
+  }, []);
 
-  const END = () => {
-    console.log(10)
-  }
+  // get data weather
+  useEffect(() => {
+    dispatch(getElement(location));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [location]);
 
+  useEffect(()=>{setCelsius(parseInt(store.data.main.temp - 272.15))},[store])
+  
   return (
-    <div className="main">
-      <StepProgressBar
-        startingStep={0} // the index of the step at which to start startingStep
-        onSubmit={END}
-        steps={[
-          {
-            label: 'Title',
-            subtitle: 'SubTitle(10%)',
-            name: 'step 1',
-            validator: step1Validator,
-            // content: <h3>this is content</h3>,
+    <Fragment>
+      {!store.isLoding ? <div className="load"><CircularProgress /></div> :
 
-          },
-          {
-            label: 'Step 2',
-            name: 'step 2',
-            subtitle: '35%',
+        <div className="main">
+          <div className="logoInfo">
+            <img
+              src="https://weather-app-psi-puce.vercel.app/static/media/day.0f9e45ee8e49d55fb4c625013d8a083b.svg"
+              alt="img" />
+            <div className="info">
+              <h3>{store.data.name}</h3>
+              <span>{moment().format("ddd,MMM d")}</span>
+              <div className="Celsius">
+                <span className="NbrC">{Celsius}</span>
+                <span className="x">°</span>
+              </div>
+            </div>
+          </div>
+        </div>}
+    </Fragment>
 
-          },
-          {
-            label: 'Step 3',
-            name: 'step 3',
-            
-
-          }
-        ]}
-        subtitleClass='SubT' //className css 
-        previousBtnName='Prev' //Change the text inside the previous btn
-        nextBtnName='Next' //Change the text inside the next btn
-        submitBtnName='Valid' //Change the text inside the submit btn
-        //another Optional https://github.com/saini-g/react-step-progress
-        />
-    </div>
-  )
+  );
 };
 
 export default App;
+// //
+//
+
+// <br/>
+//   {moment().format("LL")}
+//   <br />
+//   <br />
+//   {parseInt(store.data.main.temp - 272.15)}

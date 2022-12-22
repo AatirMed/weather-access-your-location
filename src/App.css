@@ -1,13 +1,63 @@
-._3CDiP {
-  /* Previous */
-  margin-right: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Chivo Mono', monospace;
+}
+.load{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    width: 480px;
+    height: 230px;
+    background-color: #f6d8b6;
+    margin: 50px auto;
+    color:#e57567;
+    padding: 15px 5px;
+    border-radius: 15px;
+}
+.logoInfo{
+    width: 100%;
+    height: 200px;
+    display: flex;
 }
 
-._3uApM {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.logoInfo .info{
+    padding:20px 0px ;
+    width: 270px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.SubT{
-  color:rgb(206, 175, 175)
+.logoInfo img{
+    width: 200px;
+    height: 200px;
 }
+.logoInfo .info h3{
+    font-weight: bold;
+    font-size: 27px;
+}
+.logoInfo .info span{
+    font-weight: 500;
+    font-size: 16px;
+}
+.Celsius{
+width: 100%;
+display: flex;
+justify-content: center;
+}
+.logoInfo .info .NbrC{
+    font-size: 107px;
+}
+.logoInfo .info .x{
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 20px;
+}
+/* #00b4d9 */
