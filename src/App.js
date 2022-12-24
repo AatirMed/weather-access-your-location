@@ -30,7 +30,7 @@ const [Celsius,setCelsius]=useState(0)
   
   return (
     <Fragment>
-      {!store.isLoding ? <div className="load"><CircularProgress /></div> :
+      {store.isLoding ? <div className="load"><CircularProgress /></div> :
 
         <div className="main">
           <div className="logoInfo">
