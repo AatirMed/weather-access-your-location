@@ -65,10 +65,10 @@ const weatherSlice = createSlice(
             },
             [getElement.fulfilled]: (state, action) => {
                 state.data = action.payload;
-                state.isLoding = true;
+                state.isLoding = false;
             },
             [getElement.rejected]: (state) => {
-                state.isLoding = true;
+                state.isLoding = false;
             },
         }
     }
